@@ -39,7 +39,7 @@
 	
 	Vue.use(Tabbar).use(TabbarItem).use(Icon);
 	export default {
-		name:'AppTabBar',
+		name:'TabBar',
 	}
 </script>
 

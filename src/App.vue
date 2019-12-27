@@ -3,15 +3,15 @@
 		<keep-alive>
 			<router-view />
 		</keep-alive>
-		<app-tab-bar/>
+		<tab-bar/>
 	</div>
 </template>
 <script>
-	import AppTabBar from"./components/content/APPTabBar.vue"
+	import TabBar from"./components/content/TabBar.vue"
 	export default {
 		name: 'app',
 		components: {
-			AppTabBar
+			TabBar
 		}
 	}
 </script>
