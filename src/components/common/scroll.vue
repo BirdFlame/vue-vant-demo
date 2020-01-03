@@ -9,10 +9,31 @@
 <script>
   import BScroll from "better-scroll"
   export default {
-    name: "scroll"
+    name: "scroll",
+    props: {
+      probeType: {
+        type:Number,
+        default:0
+      },
+      pullUpLoad: {
+        type: Boolean,
+        default: false
+      }
+    },
+    mounted() {
+      this.scroll=new BScroll(this.$refs.wrapper,{
+        click: true,
+        probeType: this.probeType,
+        pullUpLoad: this.pullUpLoad
+      })
+      if(this.pullUpLoad) {
+        this.scroll.on('pullUpLoad',()=> {
+          this.$emit('pullUpLoad')
+        })
+      }
+    }
   }
 </script>
 
 <style scoped>
-
 </style>
